@@ -54,6 +54,7 @@ const alljobsslice = createSlice({
       })
       .addCase(getalljobs.fulfilled, (state, { payload }) => {
         state.isLoading = false;
+        console.log(JSON.stringify(state.jobs));
         state.jobs = payload.jobs;
         state.numOfPages = payload.numOfPages;
         state.totalJobs = payload.totalJobs;

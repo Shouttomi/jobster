@@ -4,6 +4,7 @@ import { Navigate } from "react-router-dom";
 const Protectedroutes = ({children}) => {
 
     console.log("protected")
+    //bhagwan haa ~-~
     const {user} = useSelector((store)=>store.user);
 
   if(!user){

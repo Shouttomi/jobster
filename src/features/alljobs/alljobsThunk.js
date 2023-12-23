@@ -17,7 +17,7 @@ export const getalljobsThunk = async (_, thunkAPI) => {
       },
     });
 
-    console.log(resp.data);
+    console.log(JSON.stringify(resp.data.jobs));
     return resp.data;
   } catch (error) {
     return checkforunauthorizedresponse(error,thunkAPI);

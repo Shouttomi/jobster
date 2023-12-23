@@ -16,6 +16,7 @@ export const registeruserthunk = async (url, user, thunkAPI) => {
 export const loginuserthunk = async (url, user, thunkAPI) => {
   try {
     const resp = await customfetch.post(url, user);
+    console.log(resp);
     return resp.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.msg);
@@ -46,6 +47,6 @@ export const clearstoreThunk = async (message, thunkAPI) => {
 
     return Promise.resolve();
   } catch (error) {
-    return Promise.reject;
+    return Promise.reject();
   }
 };

@@ -24,6 +24,8 @@ console.log(initialState.user);
 export const registeruser = createAsyncThunk(
   "user/registeruser",
   async (user, thunkAPI) => {
+    console.log(user);
+
     return registeruserthunk("auth/register", user, thunkAPI);
   }
 );
@@ -31,6 +33,7 @@ export const registeruser = createAsyncThunk(
 export const loginuser = createAsyncThunk(
   "user/loginuser",
   async (user, thunkAPI) => {
+    console.log(user);
     return loginuserthunk("auth/login", user, thunkAPI);
   }
 );
